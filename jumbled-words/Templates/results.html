@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block  title%}
+
+Jumbled A Word
+
+{% endblock %}
+
+{% block content%}
+
+<h1 class="jumbotron text-center" class="text-center">You scored <code>{{score}}</code></h1>
+
+
+<form method="GET" action="/" class="text-center" class="form-inline">
+    <input class="btn-warning" type="submit" value="Go Back">
+</form>
+<!--<button class="btn-success" href="/jumble">Jumble a Word</button>-->
+<!--<button class="btn-info" href="/fgout">Figure out the words</button>-->
+
+{% endblock %}
+
+
+
+
+
+
+

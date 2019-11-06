@@ -1,0 +1,58 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block  title%}
+
+Jumbled A Word
+
+{% endblock %}
+
+{% block content%}
+
+<h1 class="jumbotron text-center" class="text-center">Buying Stuff</h1>
+
+
+<style>
+.mystyle{
+    margin: 2em;
+    border: 1px solid black;
+    padding: 2em;
+}
+</style>
+
+
+<div style="display: flex; flex-wrap: wrap">
+    <div class="mystyle"><p>1</p></div>
+    <div class="mystyle"><p>2</p></div>
+    <div class="mystyle"><p>3</p></div>
+    <div class="mystyle"><p>4</p></div>
+    <div class="mystyle"><p>5</p></div>
+    <div class="mystyle"><p>6</p></div>
+    <div class="mystyle"><p>7</p></div>
+    <div class="mystyle"><p>8</p></div>
+    <div class="mystyle"><p>9</p></div>
+    <div class="mystyle"><p>10</p></div>
+    <div class="mystyle"><p>11</p></div>
+    <div class="mystyle"><p>12</p></div>
+    <div class="mystyle"><p>13</p></div>
+    <div class="mystyle"><p>14</p></div>
+    <div class="mystyle"><p>15</p></div>
+</div>
+
+<select name="{{product['_id']}}">
+    <option value="0">None</option>
+    {% for n in range(1, product['allowed-units']|int + 1) %}
+        <option value="{{n}}">{{n}}</option>
+    {% endfor %}
+</select>
+<!--<button class="btn-success" href="/jumble">Jumble a Word</button>-->
+<!--<button class="btn-info" href="/fgout">Figure out the words</button>-->
+
+{% endblock %}
+
+
+
+
+
+
+

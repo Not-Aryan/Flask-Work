@@ -1,0 +1,28 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block  title%}
+
+Webserver With Flask
+
+{% endblock %}
+
+{% block content%}
+
+<h1>My Notes</h1>
+
+<form method="POST">
+    <input type="text" name="new-note" required>
+    <input type="submit" value="Save">
+</form>
+
+<div>
+    {% for note in savedNotes %}
+        <p>{{note['new-note']}}</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
+
+
+
+

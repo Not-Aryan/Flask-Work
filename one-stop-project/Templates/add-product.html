@@ -1,0 +1,35 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block  title%}
+
+Jumbled A Word
+
+{% endblock %}
+
+{% block content%}
+
+<h1 class="jumbotron text-center" class="text-center">Jumble A Word</h1>
+<form method="GET" action="/" class="text-center" class="form-inline">
+    <input class="btn-warning" type="submit" value="Go Back">
+</form>
+
+<form method="POST" action="/add" class="text-center" class="form-inline">
+    <input class = "" type="text" name="title" required>
+    <input class = "" type="text" name="description" required>
+    <input class = "" type="number" name="price" required>
+    <input class = "" type="number" name="quantity" required>
+    <input class = "" type="text" name="image" required>
+    <input class="btn-success" type="submit" value="Add Product">
+</form>
+<!--<button class="btn-success" href="/jumble">Jumble a Word</button>-->
+<!--<button class="btn-info" href="/fgout">Figure out the words</button>-->
+
+{% endblock %}
+
+
+
+
+
+
+

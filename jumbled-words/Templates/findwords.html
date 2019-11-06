@@ -1,0 +1,37 @@
+{% extends 'bootstrap/base.html' %}
+
+
+{% block  title%}
+
+Jumbled A Word
+
+{% endblock %}
+
+{% block content%}
+
+<h1 class="jumbotron text-center" class="text-center">Find Words</h1>
+
+
+<form method='POST' action="/figureout">
+
+<div class="text-center">
+    {% for doc in docs %}
+    <p><code>{{doc['word']}}</code></p>
+    <input type="text" name="word" required>
+    {% endfor %}
+    <br>
+    <input class="btn-success" class="text-center" type="submit" value="Add">
+</form>
+</div>
+
+<!--<button class="btn-success" href="/jumble">Jumble a Word</button>-->
+<!--<button class="btn-info" href="/fgout">Figure out the words</button>-->
+
+{% endblock %}
+
+
+
+
+
+
+
